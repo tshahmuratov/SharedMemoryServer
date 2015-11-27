@@ -1,0 +1,26 @@
+HKCR
+{
+	SharedMemoryServer.NameComponent.1 = s 'COMNameComponent Class'
+	{
+		CLSID = s '{F54489DF-F70E-4213-88E2-DD4A7D9695F2}'
+	}
+	SharedMemoryServer.NameComponent = s 'COMNameComponent Class'
+	{		
+		CurVer = s 'SharedMemoryServer.NameComponent.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F54489DF-F70E-4213-88E2-DD4A7D9695F2} = s 'COMNameComponent Class'
+		{
+			ProgID = s 'SharedMemoryServer.NameComponent.1'
+			VersionIndependentProgID = s 'SharedMemoryServer.NameComponent.1'
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{F53291C7-8EF5-4BA9-9B90-B4410F09FCDF}'
+			Version = s '1.0'
+		}
+	}
+}

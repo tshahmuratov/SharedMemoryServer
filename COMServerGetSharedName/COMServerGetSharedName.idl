@@ -1,0 +1,35 @@
+// COMServerGetSharedName.idl : IDL source for COMServerGetSharedName
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (COMServerGetSharedName.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(A657DA02-9C15-46BD-A16C-9F581515DFC1),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICOMNameComponent : IDispatch{
+	[id(1)] HRESULT GetSharedMemoryName([out] BSTR* SharedName);
+};
+[
+	uuid(F53291C7-8EF5-4BA9-9B90-B4410F09FCDF),
+	version(1.0),
+]
+library COMServerGetSharedNameLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(F54489DF-F70E-4213-88E2-DD4A7D9695F2)		
+	]
+	coclass COMNameComponent
+	{
+		[default] interface ICOMNameComponent;
+	};
+};
+
