@@ -6,7 +6,7 @@
 * Tests for COM component written as Visual Studio Unit Test Project
 * Tests for Shared memory server/client written with Google test project
 
-# Currently there are several TODO:
+# Currently there are several TODOs:
 
 * Better move to lock free algorithms
 * Server should use thread pool for incoming files with queues of file pieces for each thread
